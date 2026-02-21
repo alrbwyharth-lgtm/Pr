@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profitora Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; margin:0; padding:0; overflow-x:hidden; transition: background 0.5s; }
+        a { text-decoration:none; }
+        header, footer { text-align:center; padding:30px 20px; }
+        header { background:#1a3a6d; color:white; }
+        header h1 { font-size:2.5em; margin-bottom:10px; }
+        header p { font-size:1.2em; margin-bottom:20px; }
+        footer { background:#1a3a6d; color:white; font-size:0.85em; }
+        .btn { background:#f9c74f; color:#0b2545; padding:12px 25px; border-radius:8px; font-weight:bold; cursor:pointer; margin:5px; display:inline-block; transition: background 0.3s; }
+        .btn:hover { background:#d4a373; }
+        section { display:nones; min-height:calc(100vh - 140px); }
+section.active { display:block; opacity:1; }
+h2 { color:#f9c74f; text-align:center; margin-bottom:20px; }
+h3 { color:#f9c74f; margin-bottom:10px; }
+.cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.card { border-radius:12px; padding:20px; width:300px; box-shadow:0 5px 15px rgba(0,0,0,0.3); text-align:center; transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card p { font-size:0.95em; margin-bottom:15px; color:#e0e0e0; }
+input { width:90%; padding:8px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
+.small-desc { font-size:0.85em; color:#e0e0e0; margin-top:-10px; margin-bottom:10px; }
+/* أزرار التواصل */
+.contact-btn { padding:12px 20px; border-radius:50px; font-weight:bold; text-decoration:none; display:inline-block; margin:5px; transition: transform 0.3s, box-shadow 0.3s; }
+.contact-btn.whatsapp { background:#25D366; color:white; }
+.contact-btn.instagram { background:#C13584; color:white; }
+.contact-btn:hover { transform: translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.3); }
+</style>
+<script>
+function showPage(id,bgColor){
+    const pages = document.querySelectorAll('section');
+    pages.forEach(p=>{ p.classList.remove('active'); });
+    const page = document.getElementById(id);
+    page.classList.add('active');
+    if(bgColor) document.body.style.background=bgColor;
+    window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</head>
+<body>
+
+<header>
+    <h1>Profitora Academy 🚀</h1>
+    <p>منصة لتعلم الربح الرقمي، تطوير الذات، وخدمات رقمية احترافية.</p>
+    <span class="btn" onclick="showPage('services','#0b2545')">تصفح خدماتنا</span>
+</header>
+
+<!-- الصفحة الرئيسية -->
+<section id="home" class="active" style="background:#0b2545;">
+    <h2>مرحبا بك في Profitora Academy</h2>
+    <p>اختر القسم الذي ترغب بتصفحه:</p>
+    <div style="text-align:center;">
+        <span class="btn" onclick="showPage('books','#1f1f2e')">كتبنا</span>
+        <span class="btn" onclick="showPage('design','#2c2f3a')">تصميم شعارات</span>
+        <span class="btn" onclick="showPage('homework','#3a3f4a')">حل واجبات</span>
+        <span class="btn" onclick="showPage('marketing','#1b2a35')">تسويق وإعلانات</span>
+    </div>
+</section>
+
+<!-- الخدمات -->
+<section id="services" style="background:#0b2545;">
+    <h2>خدماتنا</h2>
+    <div class="cards">
+        <div class="card" style="background:#1f3f6e;">
+            <h3>تصميم شعارات</h3>
+            <p class="small-desc">هوية بصرية وشعارات احترافية لجذب العملاء.</p>
+            <span class="btn" onclick="showPage('design','#2c2f3a')">عرض التفاصيل</span>
+        </div>
+        <div class="card" style="background:#34495e;">
+            <h3>حل واجبات</h3>
+            <p class="small-desc">الخدمة قيد التحضير لضمان أعلى جودة.</p>
+            <span class="btn" onclick="showPage('homework','#3a3f4a')">عرض التفاصيل</span>
+        </div>
+        <div class="card" style="background:#22313f;">
+            <h3>تسويق وإعلانات</h3>
+            <p class="small-desc">خدمات تسويق رقمي وإعلانات لتعزيز وصول مشروعك.</p>
+            <span class="btn" onclick="showPage('marketing','#1b2a35')">عرض التفاصيل</span>
+        </div>
+        <div class="card" style="background:#1f1f2e;">
+            <h3>كتبنا</h3>
+            <p class="small-desc">كتب للربح، تطوير الذات، والذكاء المالي + طلب كتاب حسب طلبك.</p>
+            <span class="btn" onclick="showPage('books','#1f1f2e')">عرض التفاصيل</span>
+        </div>
+    </div>
+    <span class="btn" onclick="showPage('home','#0b2545')">عودة للصفحة الرئيسية</span>
+</section>
+
+<section id="design" style="background:#2c2f3a;">
+    <h2>تصميم شعارات</h2>
+    <p>نصمم شعارات وهوية بصرية احترافية بجودة عالية.</p>
+    <div style="display:flex; gap:15px; justify-content:center; margin-top:15px;">
+        <a href="https://wa.me/777519636" target="_blank" class="contact-btn whatsapp">WhatsApp 💬</a>
+        <a href="https://instagram.com/j3r.e" target="_blank" class="contact-btn instagram">Instagram 📸</a>
+    </div>
+    <span class="btn" onclick="showPage('home','#0b2545')">عودة للصفحة الرئيسية</span>
+</section>
+
+<section id="homework" style="background:#3a3f4a;">
+    <h2>حل واجبات</h2>
+    <p>الخدمة قيد التحضير وسيتم توفيرها قريبًا.</p>
+    <div style="display:flex; gap:15px; justify-content:center; margin-top:15px;">
+        <a href="https://wa.me/777519636" target="_blank" class="contact-btn whatsapp">WhatsApp 💬</a>
+        <a href="https://instagram.com/j3r.e" target="_blank" class="contact-btn instagram">Instagram 📸</a>
+    </div>
+    <span class="btn" onclick="showPage('home','#0b2545')">عودة للصفحة الرئيسية</span>
+</section>
+
+<section id="marketing" style="background:#1b2a35;">
+    <h2>تسويق وإعلانات</h2>
+    <p>حلول تسويق رقمي وإدارة حملات إعلانية ناجحة.</p>
+    <div style="display:flex; gap:15px; justify-content:center; margin-top:15px;">
+        <a href="https://wa.me/777519636" target="_blank" class="contact-btn whatsapp">WhatsApp 📨/a>
+        <a href="https://instagram.com/j3r.e" target="_blank" class="contact-btn instagram">Instagram 📸</a>
+    </div>
+    <span class="btn" onclick="showPage('home','#0b2545')">عودة للصفحة الرئيسية</span>
+</section>
+
+<section id="books" style="background:#1f1f2e;">
+    <h2>كتبنا المميزة</h2>
+    <p>استكشف كتبنا المختارة بعناية لتعلم الربح، تطوير الذات، والذكاء المالي.</p>
+
+    <div class="cards">
+        <div class="card" style="background:#2c3e50;">
+            <h3>فن تحقيق الربح الرقمي</h3>
+            <p class="small-desc">دليل شامل لتعلم طرق الربح من الإنترنت بسهولة وفعالية.</p>
+            <a href="https://example.com/book1" class="btn" target="_blank">شراء الكتاب</a>
+        </div>
+        <div class="card" style="background:#34495e;">
+            <h3>تطوير الذات والنجاح الشخصي</h3>
+            <p class="small-desc">أسرار تطوير الذات وبناء عادات قوية لتحقيق النجاح.</p>
+            <a href="https://example.com/book2" class="btn" target="_blank">شراء الكتاب</a>
+        </div>
+        <div class="card" style="background:#22313f;">
+            <h3>الذكاء المالي وإدارة الأموال</h3>
+            <p class="small-desc">خطوات عملية لإدارة المال وزيادة الدخل وتحقيق أهدافك المالية.</p>
+            <a href="https://example.com/book3" class="btn" target="_blank">شراء الكتاب</a>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:30px; background:#2c3e50;">
+        <h3>اطلب كتابك الخاص</h3>
+        <p>هل ترغب بكتاب عن موضوع معين؟ أرسل لنا التفاصيل وسنقوم بإعداده لك.</p>
+        <div style="display:flex; gap:15px; justify-content:center; margin-top:15px;">
+            <a href="https://wa.me/777519636" target="_blank" class="contact-btn whatsapp">WhatsApp 💬</a>
+            <a href="https://instagram.com/j3r.e" target="_blank" class="contact-btn instagram">Instagram 📸</a>
+        </div>
+    </div>
+
+    <span class="btn" onclick="showPage('home','#0b2545')">عودة للصفحة الرئيسية</span>
+</section>
+
+<footer>
+<p>المطور والمصمم: حارث الربوعي | مدير المنصة والمسؤول: عبدالله المرشدي &copy; 2026 Profitora Academy</p>
+</footer>
+
+</body>
+</html>
